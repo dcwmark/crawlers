@@ -1,0 +1,53 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+form {
+    display: block;
+}
+input , textarea {
+    margin-left: 5px;
+}
+input[type=submit] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/*
+  something good to remember
+  and class leading 'col-'
+[class*="col-"] {
+    border: 1px;
+    border-style: solid;
+}
+*/
+.spidey-body {
+    position: absolute;
+    height: 100vh;
+    min-width: 875px;
+    left: 0;
+    right: 0;
+}
+.spidey-label {
+    padding: 2px;
+    text-align: right;
+}
+.spidey-label::after {
+    content: ":";
+}
+.spidey-input {
+    display: block;
+    padding: 2px;
+}
+.spidey-footer {
+    position: absolute;
+    background-color: #eeeeee;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

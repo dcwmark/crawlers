@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<meta name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0">
+<title>Spidey</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="spidey-body">
+
+    <div>
+        <form method="post" onsubmit="return postToUrl();">
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">&nbsp;</div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 spidey-label">
+                    URL
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 spidey-input">
+                   <input type="text"
+                          id="url"
+                          name="url"
+                          tabindex="1">
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 spidey-label">
+                    Search
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 spidey-input">
+                   <textarea type="text"
+                             id="searchText"
+                             name="searchText"
+                             tabindex="2">
+                   </textarea>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">&nbsp;</div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div>
+                <div class="row">
+                    <input type="submit" value="Search" tabindex="3">
+                </div>
+            </div>
+        </form>
+        <div class="spidey-footer">
+            &nbsp;
+        </div>
+    </div>
+
+    <script type="text/javascript"
+            src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="node_modules/bootstrap/dist/js//bootstrap.min.js"></script>
+    <script type="text/javascript" src="cc.js"></script>
+    <script type="text/javascript" src="spidey.js"></script>
+
+</body>
+</html>
