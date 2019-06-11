@@ -1,22 +1,36 @@
-var cla = require('command-line-args');
-var optDefs = [{
-    name: 'url',
-    type: String
-}, {
-    name: 'search',
-    type: String,
-    multiple: true
-}];
-var options = cla(optDefs);
-console.log('options::', options);
+function creepy() {
+    "use strict";
 
-var protocol = 'http://';
-var pageToVisit = protocol + options.url;
-console.log('Visiting page::', pageToVisit);
+    const Crawler = require('./crawler');
+    const cla = require('command-line-args');
+    const optDefs = [{
+        name: 'url',
+        type: String
+    }, {
+        name: 'search',
+        type: String,
+        multiple: true
+    }];
+    const options = cla(optDefs);
+    console.log('options::', options);
 
-var searchTag = options.search;
-console.log('Search Tag::', searchTag);
+    const protocol = 'http://';
+    const pageToVisit = protocol + options.url || 'www.cnn.com';
+    console.log('Visiting page::', pageToVisit);
 
-var crawler = require('crawler');
+    const searchTag = options.search;
+    console.log('Search Tag::', searchTag);
 
-var $ = crawler(pageToVisit, searchTag);
+    this.crawl = function() {
+        const crawler = new Crawler();
+        var $;
+        crawler.visit(pageToVisit).then(function(result) {
+            $ = result;
+            console.log('***** creepy got $::', $);
+        }, function(error) {
+            console.error(error);
+        });
+    };
+}
+
+module.exports = creepy;
