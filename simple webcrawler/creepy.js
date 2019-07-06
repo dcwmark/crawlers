@@ -15,7 +15,7 @@ function creepy() {
     console.log('options::', options);
 
     const protocol = 'http://';
-    const pageToVisit = protocol + options.url || 'www.cnn.com';
+    const pageToVisit = protocol + options.url || 'https://www.allrecipes.com/recipes/';
     console.log('Visiting page::', pageToVisit);
 
     const searchTag = options.search;
@@ -24,7 +24,7 @@ function creepy() {
     this.crawl = function() {
         const crawler = new Crawler();
         var $;
-        crawler.visit(pageToVisit).then(function(result) {
+        crawler.visit(pageToVisit).then( (result) => {
             $ = result;
             console.log('***** creepy got $::', $);
         }, function(error) {

@@ -32,12 +32,12 @@ function crawler() {
             absoluteLinks.each(function() {
                 allAbsoluteLinks.push($(this).attr('href'));
             });
-    /*
+    
             console.log("Found " + allRelativeLinks.length + " relative links");
             console.log("Found " + allAbsoluteLinks.length + " absolute links");
             console.log("allRelativeLinks::", allRelativeLinks);
             console.log("allAbsoluteLinks::", allAbsoluteLinks);
-    */
+    
         })($);
     
         (function($, searchTag) {
@@ -49,7 +49,7 @@ function crawler() {
                 }
             });
             matched.map(function(match) {
-    //            console.log('match::', match);
+                console.log('match::', match);
             });
         })($, searchTag);
     });
